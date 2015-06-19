@@ -6,9 +6,9 @@ module OmniAuth
       option :name, 'cohabitat_user'
 
       option :client_options, {
-        :site          => "#{ENV["OMNIAUTH_COHABITAT_USER_BASE_URL"] || "https://konto.cohabitat.net"}",
-        :token_url     => "#{ENV["OMNIAUTH_COHABITAT_USER_BASE_URL"] || "https://konto.cohabitat.net"}/oauth/token",
-        :authorize_url => "#{ENV["OMNIAUTH_COHABITAT_USER_BASE_URL"] || "https://konto.cohabitat.net"}/oauth/authorize/Admin",
+        :site          => "#{ENV["OMNIAUTH_COHABITAT_ADMIN_BASE_URL"] || "https://konto.cohabitat.net"}",
+        :token_url     => "#{ENV["OMNIAUTH_COHABITAT_ADMIN_BASE_URL"] || "https://konto.cohabitat.net"}/oauth2/token",
+        :authorize_url => "#{ENV["OMNIAUTH_COHABITAT_ADMIN_BASE_URL"] || "https://konto.cohabitat.net"}/oauth2/authorize/Admin",
       }
 
       uid { raw_info["id"] }
